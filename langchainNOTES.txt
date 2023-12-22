@@ -1,0 +1,3 @@
+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
+hugging face api: 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
+activate env: .\.langchain\Scripts\activate
