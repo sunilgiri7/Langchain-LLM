@@ -1,0 +1,24 @@
+End-to-End Text-to-SQL LLM App
+Welcome to the End-to-End Text-to-SQL LLM App powered by Google Gemini Pro! 🚀
+
+Overview
+This project demonstrates the successful implementation of a Text-to-SQL Language Model using Google Gemini Pro. The app allows users to convert natural language queries into SQL commands, providing a seamless and efficient interaction with SQL databases.
+
+Features
+Gemini Pro Integration: Utilizes Google Gemini Pro for advanced natural language understanding.
+Tailored Prompts: Explore the prompts designed to enhance responses from the Gemini model.
+MMLU Milestone: Gemini achieves a groundbreaking milestone by outperforming human experts on Massive Multitask Language Understanding.
+Getting Started
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/sunilgiri7/Langchain-LLM.git
+cd Langchain-LLM/End%20To%20End%20Text%20To%20SQL%20LLM%20App
+Explore the app, review the code, and share your thoughts!
+
+Acknowledgements
+A special shoutout to Krish Naik for his mentorship and invaluable insights throughout this journey. His expertise has been instrumental in the success of this project. 🙌🌟
+
+Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
