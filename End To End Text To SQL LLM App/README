@@ -1,0 +1,18 @@
+# End To End Text To SQL LLM App Along With Querying SQL Database Using Google Gemini Pro
+
+## Overview
+This project demonstrates the successful implementation of a Text-to-SQL Language Model using Google Gemini Pro. The app allows users to convert natural language queries into SQL commands, providing a seamless and efficient interaction with SQL databases.
+
+## Features
+Gemini Pro Integration: Utilizes Google Gemini Pro for advanced natural language understanding.
+Tailored Prompts: Explore the prompts designed to enhance responses from the Gemini model.
+Query Execution: Execute a variety of SQL queries and receive expected results.
+Database Modification: Modify, update, and interact with the database directly from the app.
+## Getting Started
+Clone the repository:
+
+## Acknowledgements
+A special shoutout to Krish Naik for his mentorship and invaluable insights throughout this journey. His expertise has been instrumental in the success of this project. 🙌🌟
+
+## Contributing
+Contributions are welcome! Feel free to open issues or submit pull requests.
