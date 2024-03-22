@@ -1,7 +1,7 @@
 import pymongo
 import requests
 
-client = pymongo.MongoClient("mongodb+srv://thisissunil7:eyxshHYfeJiFOvex@clusterrag.k4kmw3s.mongodb.net/?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://thisissunil7:r6xRjTjxzYjwkQJY@clusterrag.k4kmw3s.mongodb.net/?retryWrites=true&w=majority")
 db = client.sample_mflix
 collection = db.movies
 
@@ -19,21 +19,22 @@ def generate_embedding(text: str) -> list[float]:
     
     return response.json()
 
-# for doc in collection.find({'plot':{"$exists": True}}).limit(50):
-#     doc['plot_embedding_hf'] = generate_embedding(doc['plot'])
-#     collection.replace_one({'id': doc['_id']}, doc)
+for doc in collection.find({'plot':{"$exists": True}}).limit(50):
+    doc['plot_embedding_hf'] = generate_embedding(doc['plot'])
+    collection.replace_one({'_id': doc['_id']}, doc)
 
-query = "aliens from the another space"
-result = collection.aggregate([
-    {
-        "$vectorSearch": {
-            "queryVector": generate_embedding(query),
-            "path": "plot_embedding_hf",
-            "numCandidates": 100,
-            "limit": 4,
-            "index": "PlotSemanticSearch"
-        }
-    }
+
+query = "imaginary characters from outer space at war"
+
+results = collection.aggregate([
+  {"$vectorSearch": {
+    "queryVector": generate_embedding(query),
+    "path": "plot_embedding_hf",
+    "numCandidates": 100,
+    "limit": 4,
+    "index": "PlotSemanticSearch",
+      }}
 ]);
-for document in result:
+print("Result with Different Query:", list(results))
+for document in results:
     print(f"Movie Name {document['title']}, \nMovie Plot: {document['plot']}\n")
