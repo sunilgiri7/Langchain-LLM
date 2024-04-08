@@ -1,5 +1,6 @@
 import pymongo
 import requests
+#what is the cost of Model Y in given tesla website
 
 client = pymongo.MongoClient("mongodb+srv://thisissunil7:r6xRjTjxzYjwkQJY@clusterrag.k4kmw3s.mongodb.net/?retryWrites=true&w=majority")
 db = client.sample_mflix
